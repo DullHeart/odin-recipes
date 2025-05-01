@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>The Perfect Margarita</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <style>
+      body  {
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        background-color: #fcfaf8;
+        color: #333;
+        max-width: 1500px;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+
+      }
+      h1 {
+        text-align: center;
+        margin: 30px 0 15px;
+        font-size: 2rem;
+        color: #F7C324; 
+        text-decoration: none;
+        border-bottom: 4px solid #8BC34A; 
+        padding-bottom: 5px;
+
+      }
+      .container {
+        padding: 2rem;
+      }
+
+      .slider-wrapper {
+        position: relative;
+        max-width: 48rem;
+        margin: 0 auto;
+      }
+      .slider {
+        display: flex;
+        aspect-ratio: 16 / 9;
+        overflow: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.25);
+        border-radius: 0.5rem;
+      }
+
+      .slider img {
+        flex: 1 0 100%;
+        scroll-snap-align: start;
+        object-fit: cover;
+      }
+
+      .slider-nav {
+        display: flex;
+        column-gap: 1rem;
+        position: absolute;
+        bottom: 1.25rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+      }
+
+      .slider-nav a {
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+        background-color: #fff;
+        opacity: 0.75;
+        transition: opacity ease 250ms;
+      }
+
+      .slider-nav a:hover {
+        opacity: 1;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        margin: 30px 0 20px;
+        color: #F7C324; 
+        text-decoration: none;
+        border-bottom: 3px solid #8BC34A; 
+        padding-bottom: 8px;
+        position: relative;
+        padding-left: 15px;
+      }
+
+      h2::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 6px;
+        height: 100%;
+        background-color: #8BC34A; 
+        border-radius: 3px;
+
+      }
+
+      ul li,
+      ol li{
+        margin: 12px auto;
+        padding: 15px 20px;
+        background-color: #ffffff; 
+        border-radius: 10px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.07);
+        max-width: 850px;
+        width: auto;
+        list-style-position: outside;
+        line-height: 1.6;
+        font-size: 1rem;
+        color: #444;
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+     }
+     ul li:hover,
+     ol li:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      ul {
+        padding-left: 20px;
+      }
+
+      ol {
+        list-style: none;
+        padding-left: 0;
+        counter-reset: step-counter;
+      }
+
+
+      ol li {
+        margin: 20px auto;
+        display: flex;
+        align-items: flex-start;
+        padding: 20px 25px;
+        background-color: #f9f9f9; 
+      }
+      ol li::before {
+        counter-increment: step-counter;
+        content: counter(step-counter);
+        flex-shrink: 0;
+        background-color: #8BC34A; 
+        color: #fff; 
+        
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+
+      ol li .step-content {
+        flex-grow: 1;
+      }
+
+
+      ol li strong {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 1.2rem;
+        color: #333;
+      }
+
+      ol li p {
+        margin: 0;
+        padding: 0;
+        font-size: 1rem;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>The Perfect Margarita</h1>
+    <section class="container">
+      <div class="slider-wrapper">
+        <div class="slider">
+          <img id="slide 1" src="https://www.allrecipes.com/thmb/ar4VmiJFN1-McXRjG2XXQnGxMM0=/0x512/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/264606-the-perfect-margarita-DDMFS-4x3-cc94f83d87ff4ba0843056396da3ab00.jpg" alt="The Perfect Margarita">
+          <img id="slide-2" src="https://isthmus.com/downloads/45755/download/Cocktail-Margarita-crJustinSprecher-06082017%20%282%29.jpg?cb=a7dd3cb741393c2ec869f6f5b39c434d" alt="Margarita">
+          <img id="slide-3" src="https://www.theendlessmeal.com/wp-content/uploads/2023/02/mezcal-margarita-2-1367x2048.jpg" alt="King Ranch Chicken Casserole">
+        </div>
+        <div class="slider-nav">
+          <a href="#slide-1"></a>
+          <a href="#slide-2"></a>
+          <a href="#slide-3"></a>
+        </div>
+      </div>
+    </section>
+    <section class="container">
+      <h2>Description</h2>
+      <p>
+        This is the best margarita recipe I know! It has the perfect ratio of white tequila, high-quality triple sec, and freshly squeezed lime juice for the best-tasting sweet and sour margarita every time.
+      </p>
+      </section>
+    <section class="container">
+
+      <h2>Ingredients</h2>
+      <ul>
+        <li>1 wedge lime</li>
+        <li>
+          1 teaspoon coarse sea salt, or as needed
+        </li>
+        <li>
+          1 large ice cube
+        </li>
+        <li>
+          1 cup ice cubes, or as needed
+        </li>
+        <li>
+          2 fluid ounces white tequila
+        </li>
+        <li>
+          1 ½ fluid ounces triple sec
+        </li>
+        <li>
+          1 fluid ounce freshly squeezed lime juice
+        </li>
+        <li>1 slice lime</li>
+      </ul>
+
+
+      <h2>Steps</h2>
+      <ol>
+        <li>
+          <div class="step-content">
+            
+            <p>
+              Gather all ingredients.
+            </p>
+          </div>  
+        </li>
+        <li>
+          <div class="step-content">
+            
+            <p>
+              Moisten the rim of a glass with a lime wedge. Sprinkle salt onto a plate. Lightly dip the moistened rim into the salt.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="step-content">
+            
+            <p>
+              Place a large ice cube in the glass and freeze the prepared glass until ready to serve.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="step-content">
+            
+            <p>
+              Fill a cocktail shaker with fresh ice. Add tequila, triple sec, and lime juice. Cover and shake vigorously until the outside of the shaker has frosted.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="step-content">
+           
+            <p>
+              Strain margarita into the salt-rimmed chilled glass and garnish with a slice of lime.
+            </p>
+          </div>
+      </li>
+        <li>
+          <div class="step-content">
+            
+            <p>
+              Enjoy!
+            </p>
+          </div>
+        </li>
+      </ol>   
+   </section>
+
+
+
+    
+    <script src="" async defer></script>
+  </body>
+</html>

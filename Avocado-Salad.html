@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Avocado Salad</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <style>
+      body  {
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        background-color: #fcfaf8; 
+        color: #333; 
+        max-width: 1500px;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    
+      }
+      h1 {
+        text-align: center;
+        margin: 30px 0 15px;
+        font-size: 2rem;
+        color: #4A6B4A; 
+        text-decoration: none;
+        border-bottom: 4px solid #81B622; 
+        padding-bottom: 5px;
+    
+      }
+      .container {
+        padding: 2rem;
+      }
+    
+      .slider-wrapper {
+        position: relative;
+        max-width: 48rem;
+        margin: 0 auto;
+      }
+      .slider {
+        display: flex;
+        aspect-ratio: 16 / 9;
+        overflow: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.25);
+        border-radius: 0.5rem;
+      }
+    
+      .slider img {
+        flex: 1 0 100%;
+        scroll-snap-align: start;
+        object-fit: cover;
+      }
+    
+      .slider-nav {
+        display: flex;
+        column-gap: 1rem;
+        position: absolute;
+        bottom: 1.25rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+      }
+    
+      .slider-nav a {
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+        background-color: #fff; 
+        opacity: 0.75;
+        transition: opacity ease 250ms;
+      }
+    
+      .slider-nav a:hover {
+        opacity: 1;
+      }
+    
+      h2 {
+        font-size: 1.5rem;
+        margin: 30px 0 20px;
+        color: #4A6B4A; 
+        text-decoration: none;
+        border-bottom: 3px solid #81B622; 
+        padding-bottom: 8px;
+        position: relative;
+        padding-left: 15px;
+      }
+    
+      h2::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 6px;
+        height: 100%;
+        background-color: #81B622; 
+        border-radius: 3px;
+    
+      }
+    
+      ul li,
+      ol li{
+        margin: 12px auto;
+        padding: 15px 20px;
+        background-color: #ffffff; 
+        border-radius: 10px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.07);
+        max-width: 850px;
+        width: auto;
+        list-style-position: outside;
+        line-height: 1.6;
+        font-size: 1rem;
+        color: #444; 
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    
+     }
+     ul li:hover,
+     ol li:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+    
+      ul {
+        padding-left: 20px;
+      }
+    
+      ol {
+        list-style: none;
+        padding-left: 0;
+        counter-reset: step-counter;
+      }
+    
+    
+      ol li {
+        margin: 20px auto;
+        display: flex;
+        align-items: flex-start;
+        padding: 20px 25px;
+        background-color: #f9f9f9; 
+      }
+      ol li::before {
+        counter-increment: step-counter;
+        content: counter(step-counter);
+        flex-shrink: 0;
+        background-color: #81B622; 
+        color: #fff;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+    
+      ol li .step-content {
+        flex-grow: 1;
+      }
+    
+    
+      ol li strong {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 1.2rem;
+        color: #333; 
+      }
+    
+      ol li p {
+        margin: 0;
+        padding: 0;
+        font-size: 1rem;
+        color: #555; 
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Avocado Salad</h1>
+    <section class="container">
+      <div class="slider-wrapper">
+        <div class="slider">
+          <img id="slide 1" src="https://cdn.loveandlemons.com/wp-content/uploads/2024/07/avocado-salad.jpg" alt="Avocado salad">
+          <img id="slide-2" src="https://www.allrecipes.com/thmb/jHaW0_eXE1HA-nCRZaOo7Cz963U=/0x512/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/19960-avocado-salad-VAT-001-4x3-64241afdc3b04d00a9372e1573eac6f7.jpg" alt="Avocado salad">
+          <img id="slide-3" src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fpublic-assets.meredithcorp.io%2F30ceabd7462fc0cdb1c82d27e5886328%2F1698109292834IMG_9048a.JPG&q=60&c=sc&poi=auto&orient=true&h=512" alt="Avocado salad">
+        </div>
+        <div class="slider-nav">
+          <a href="#slide-1"></a>
+          <a href="#slide-2"></a>
+          <a href="#slide-3"></a>
+        </div>
+      </div>
+    </section>
+    <section class="container">
+    <h2>Description</h2>
+    <p>
+      This <strong>avocado salad</strong> is a delicious combination of ripe avocados, sweet onions, fresh tomatoes, and cilantro. This recipe is so easy to make and very colorful — I think you'll like it!
+    </p>
+    </section>
+  
+    <section class="container">
+
+      <h2>Ingredients</h2>
+      <ul>
+        <li>2 ripe avocados - peeled, pitted and diced
+        </li>
+        <li>1 sweet onion, chopped</li>
+        <li>1 green bell pepper, chopped</li>
+        <li>1 large ripe tomato, chopped</li>
+        <li>
+          ¼ cup chopped fresh cilantro
+        </li>
+        <li>
+          ½ lime, juiced
+        </li>
+        <li>
+          salt and pepper to taste
+        </li>  
+      </ul>
+
+
+      <h2>Steps</h2>
+      <ol>
+        <li>
+          <div class="step-content">
+            
+            <p>
+              Gather the ingredients. 
+            </p>
+          </div>  
+        </li>
+        <li>
+          <div class="step-content">
+            
+            <p>
+              Combine avocados, onion, bell pepper, tomato, cilantro, and lime juice in a large bowl.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="step-content">
+            
+            <p>
+              Gently toss until evenly coated. Season with salt and pepper.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="step-content">
+            
+            <p>
+              Enjoy!
+            </p>
+          </div>
+        </li>
+  
+      </ol>
+      
+   </section>
+
+
+
+    
+    <script src="" async defer></script>
+  </body>
+</html>
